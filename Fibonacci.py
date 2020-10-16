@@ -1,6 +1,6 @@
 ## Iterative Solution ##
 
-def fibonacci(n):
+def iterFibonacci(n):
   if n < 0:
     return ValueError('Number must be positive.')
   fibs_list = [0,1]
@@ -16,20 +16,20 @@ def fibonacci(n):
 
 
 # test cases
-print(fibonacci(3) == 2)
-print(fibonacci(7) == 13)
-print(fibonacci(0) == 0)
-print(fibonacci(-1))
+print(iterFibonacci(3) == 2)
+print(iterFibonacci(7) == 13)
+print(iterFibonacci(0) == 0)
+print(iterFibonacci(-1))
 
 ## Recursive Solution ##
 
-def fibonacci(n):
+def recFibonacci(n):
   if n < 0:
     ValueError("Input 0 or greater only!")
   if n <= 1:
     return n
   return fibonacci(n - 1) + fibonacci(n - 2)
 
-fibonacci(3)
-fibonacci(7)
-fibonacci(0)
+print(recFibonacci(3))
+print(recFibonacci(7))
+print(recFibonacci(0))
